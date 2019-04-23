@@ -1,17 +1,32 @@
 <template>
-  <div>
-    <div v-for="todoItem in todos" :key="todoItem.id" class="todo__item">
-      <h1>{{ todoItem.title }}</h1>
-      <p>{{ todoItem.desc }}</p>
-
-      <button @click="onClickEdit(todoItem)" class="todo__btn todo__btn--edit">Edit</button>
-      <button @click="onClickDelete(todoItem)" class="todo__btn todo__btn--delete">Delete</button>
+  <div class="container">
+    <div class="level">
+      <div class="level-item has-text-centered">
+        <div v-for="todoItem in todos" :key="todoItem.id" class="card" style="width: 300px;margin: .5em;">
+          <header class="card-header">
+            <h1 class="card-header-title title">{{ todoItem.title }}</h1>
+          </header>
+          <div class="card-content">
+            {{ todoItem.desc }}
+          </div>
+          <footer class="card-footer">
+            <a href="#" @click="onClickEdit(todoItem)" class="card-footer-item">Edit</a>
+            <a href="#" @click="onClickDelete(todoItem)" class="card-footer-item">Delete</a>
+          </footer>
+        </div>
+      </div>
     </div>
     <br>
-    <div class="todo__form">
-      <input type="text" v-model="todo.title" placeholder="Type title" class="todo__input">
-      <input type="text" v-model="todo.desc" placeholder="Type description" class="todo__input">
-      <button @click="onSaveNewTodo" class="todo__btn todo__btn--save">Save</button>
+    <div class="form">
+      <div class="field">
+        <input type="text" v-model="todo.title" placeholder="Type title" class="input">
+      </div>
+      <div class="field">
+        <input type="text" v-model="todo.desc" placeholder="Type description" class="input">
+      </div>
+      <div class="field">
+        <button @click="onSaveNewTodo" class="button is-primary">Save</button>
+      </div>
     </div>
   </div>
 </template>
@@ -59,45 +74,3 @@ export default {
   }
 }
 </script>
-
-<style lang="css" scoped>
-.todo__item {
-  border: 2px solid #ddd;
-  border-radius: 0.25em;
-  padding: 1em;
-  margin: 1em;
-  text-align: left;
-}
-.todo__form{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
-  margin: 1em;
-}
-.todo__input{
-  width: 100%;
-  max-width: 250px;
-  padding: 1em;
-  border: 1px solid #ddd;
-  border-radius: 0.25em;
-  margin: .25em 0;
-}
-.todo__btn {
-  padding: 1em 3em;
-  margin: 0.5em;
-  border: 0;
-  outline: 0;
-  border-radius: 0.25em;
-  cursor: pointer;
-}
-.todo__btn--edit {
-  background-color: #00d0b2;
-}
-.todo__btn--delete {
-  background-color: #ff3760;
-}
-.todo__btn--save {
-  background-color: #3273dc;
-}
-</style>
