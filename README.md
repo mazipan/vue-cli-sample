@@ -1,5 +1,7 @@
 # vue-cli-sample
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d64d5c50-e0c4-4f78-8d30-0af7358bcb90/deploy-status)](https://app.netlify.com/sites/mazipan-vue-cli/deploys)
+
 ## Project setup
 ```
 yarn install
