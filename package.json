@@ -44,10 +44,11 @@
     "less-loader": "5.0.0",
     "lint-staged": "9.2.0",
     "vue-jest": "3.0.4",
-    "vue-template-compiler": "2.6.10"
+    "vue-template-compiler": "2.6.10",
+    "webpack-dev-server": "3.7.2"
   },
   "resolutions": {
-    "webpack-dev-server": "3.2.1"
+    "webpack-dev-server": "3.7.2"
   },
   "bugs": {
     "url": "https://github.com/mazipan/vue-cli-sample/issues"
