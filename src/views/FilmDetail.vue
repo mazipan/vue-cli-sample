@@ -7,7 +7,7 @@
     <h2>Rating: {{ film.rt_score }}</h2>
     <p>{{ film.description }}</p>
 
-    <router-link to="/film">
+    <router-link to="/films">
       Back to Film List
     </router-link>
   </div>
