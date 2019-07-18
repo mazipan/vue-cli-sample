@@ -5,7 +5,7 @@
   "description": "Sample project generated using Vue-CLI",
   "author": "Irfan Maulana <github.com/mazipan>",
   "scripts": {
-    "serve": "./node_modules/.bin/cross-env NODE_ENV=development vue-cli-service serve",
+    "serve": "./node_modules/.bin/cross-env NODE_ENV=development vue-cli-service serve --host localhost",
     "build": "./node_modules/.bin/cross-env NODE_ENV=production vue-cli-service build",
     "test": "./node_modules/.bin/cross-env NODE_ENV=test jest --coverage",
     "lint": "vue-cli-service lint",
@@ -45,6 +45,9 @@
     "lint-staged": "9.2.0",
     "vue-jest": "3.0.4",
     "vue-template-compiler": "2.6.10"
+  },
+  "resolutions": {
+    "webpack-dev-server": "3.2.1"
   },
   "bugs": {
     "url": "https://github.com/mazipan/vue-cli-sample/issues"
