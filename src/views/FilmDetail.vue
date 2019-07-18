@@ -3,7 +3,13 @@
     <h1>{{ film.title }}</h1>
     <h2>Release: {{ film.release_date }}</h2>
     <h2>Director: {{ film.director }}</h2>
-    <h2>Director: {{ film.director }}</h2>
+    <h2>Producer: {{ film.producer }}</h2>
+    <h2>Rating: {{ film.rt_score }}</h2>
+    <p>{{ film.description }}</p>
+
+    <router-link to="/film">
+      Back to Film List
+    </router-link>
   </div>
 </template>
 
@@ -36,5 +42,4 @@ export default {
 </script>
 
 <style lang="less" scoped>
-
 </style>
