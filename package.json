@@ -5,9 +5,9 @@
   "description": "Sample project generated using Vue-CLI",
   "author": "Irfan Maulana <github.com/mazipan>",
   "scripts": {
-    "serve": "cross-env NODE_ENV=development vue-cli-service serve",
-    "build": "cross-env NODE_ENV=production vue-cli-service build",
-    "test": "cross-env NODE_ENV=test jest",
+    "serve": "./node_modules/.bin/cross-env NODE_ENV=development vue-cli-service serve",
+    "build": "./node_modules/.bin/cross-env NODE_ENV=production vue-cli-service build",
+    "test": "./node_modules/.bin/cross-env NODE_ENV=test jest --coverage",
     "lint": "vue-cli-service lint",
     "dev": "npm run serve",
     "dist": "npm run dist",

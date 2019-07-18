@@ -1,21 +1,30 @@
 language: node_js
 node_js: '8'
+
 branches:
   only:
   - master
+
 cache:
   directories:
     - node_modules
+
 install:
   - npm install
-script: 
+
+script:
   - npm run lint
   - npm run test
+
+after_script:
+  - npm install -g codecov
+  - codecov
+
 deploy:
   provider: pages
-  skip-cleanup: true
+  skip-cleanup: false
   github-token: $GITHUB_TOKEN
-  keep-history: true
+  keep-history: false
   local-dir: dist
   verbose: true
   on:
