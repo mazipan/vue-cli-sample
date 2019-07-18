@@ -13,8 +13,12 @@ install:
   - npm install
 
 script:
+  # Runnning Linters
   - npm run lint
+  # Runnning Unit Test
   - npm run test
+  # Runnning Build
+  - npm run build
 
 after_script:
   - npm install -g codecov
